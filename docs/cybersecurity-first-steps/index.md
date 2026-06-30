@@ -1,34 +1,62 @@
 ﻿# Cybersecurity First Steps
 
-This guide is for someone who is curious about cybersecurity but is new to Linux, Kali Linux, networking, and command-line tools.
+Cybersecurity First Steps is a beginner-friendly learning path for people who are curious about cybersecurity but are new to Linux, Kali Linux, networking, and command-line tools.
 
 The goal is not to rush into hacking.
 
-The goal is to learn safely, legally, and step by step.
+The goal is to build understanding step by step.
 
-## Who this is for
+## Who this learning path is for
 
-This guide is for beginners who:
+This path is for beginners who:
 
 - Have little or no Linux experience
 - Want to understand Kali Linux
 - Want to learn basic cybersecurity tools
-- Want a safe first practice path
+- Want safe hands-on practice
 - Prefer plain-English explanations
+- Want to understand what commands and tools actually do
 
-## How to use this guide
+## What you will learn
 
-Start at the beginning and move in order.
+By the end of this learning path, you should understand:
 
-Each lesson is designed to include:
+- What cybersecurity is
+- Why permission and safety matter
+- What Kali Linux is used for
+- How to create a Kali live USB
+- Basic Linux terminal commands
+- Basic networking concepts
+- What Nmap does
+- What Wireshark does
+- How to perform a safe home Wi-Fi security review
+- How to continue learning through legal practice labs
 
-- Goal
-- Plain-English explanation
-- New terms
-- Step-by-step instructions
-- Stop and check section
-- Common mistakes
-- What to do next
+## Learning path modules
+
+### Module 1: Getting Started
+
+Learn what cybersecurity is, how this path is organized, and why permission matters.
+
+### Module 2: Kali Linux
+
+Learn what Kali is, how to download it, how to create a live USB, and how to boot into it.
+
+### Module 3: Linux Basics
+
+Learn basic terminal usage, file navigation, and beginner commands.
+
+### Module 4: Networking Basics
+
+Learn about networks, Wi-Fi, IP addresses, ports, and services.
+
+### Module 5: Beginner Tools
+
+Learn what Kali tools are, then start with Nmap and Wireshark.
+
+### Module 6: Safe Practice Labs
+
+Apply what you learned through safe, authorized beginner labs.
 
 ## Important rule
 
@@ -36,15 +64,16 @@ Only test systems, devices, accounts, and networks that you personally own or ha
 
 If you are unsure whether you have permission, stop.
 
-## Recommended first path
+## Recommended pace
 
-1. Read Safety and Permission
-2. Learn what cybersecurity is
-3. Learn what Kali Linux is
-4. Download Kali
-5. Create a live USB
-6. Boot into Kali
-7. Learn basic Linux commands
-8. Learn basic networking
-9. Try the Home Wi-Fi Security Check
-10. Try the First Nmap Scan
+Take your time.
+
+A good beginner pace is one or two lessons at a time.
+
+Do not worry about memorizing everything immediately. Focus on understanding the main idea of each lesson before moving on.
+
+## Start here
+
+Begin with:
+
+[Lesson 1: Learning Path](getting-started/learning-path.md)
