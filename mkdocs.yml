@@ -57,10 +57,13 @@ nav:
 
       - Glossary: cybersecurity-first-steps/glossary.md
 
+  - About: about.md
+  - Teaching Philosophy: teaching-philosophy.md
   - Downloads: downloads.md
   - Updates: updates.md
   - Changelog: changelog.md
   - Content Roadmap: content-roadmap.md
+  - Style Guide: style-guide.md
 
 markdown_extensions:
   - admonition
