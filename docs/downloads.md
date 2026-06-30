@@ -1,4 +1,4 @@
-# Downloads
+﻿# Downloads
 
 Downloadable versions of guides will be listed here.
 

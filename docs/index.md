@@ -1,4 +1,4 @@
-# Horizon Learning
+﻿# Horizon Learning
 
 Welcome to Horizon Learning.
 
@@ -17,7 +17,7 @@ New to cybersecurity?
 
 Start with:
 
-[Cybersecurity First Steps](cybersecurity-first-steps/)
+[Cybersecurity First Steps](cybersecurity-first-steps/index.md)
 
 This guide is written for beginners who have not used Linux or Kali before.
 
@@ -33,3 +33,4 @@ This guide is written for beginners who have not used Linux or Kali before.
 - Horizon Home documentation
 - RiderRadar help documents
 - ShopBridge help documents
+

@@ -1,4 +1,4 @@
-# Glossary
+﻿# Glossary
 
 This glossary explains beginner terms in plain English.
 

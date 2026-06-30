@@ -1,4 +1,4 @@
-# Beginner Progress Checklist
+﻿# Beginner Progress Checklist
 
 Use this checklist to track your progress.
 

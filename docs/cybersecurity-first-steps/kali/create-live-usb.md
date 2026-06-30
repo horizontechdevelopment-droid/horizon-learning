@@ -1,4 +1,4 @@
-# Create a Live USB
+﻿# Create a Live USB
 
 ## Goal
 

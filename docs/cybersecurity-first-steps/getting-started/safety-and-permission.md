@@ -1,4 +1,4 @@
-# Safety and Permission
+﻿# Safety and Permission
 
 ## Goal
 
@@ -58,11 +58,11 @@ Even if your intent is harmless, using those tools on systems you do not own can
 
 A good beginner question is not:
 
-“Can I hack this?”
+â€œCan I hack this?â€
 
 A better question is:
 
-“Do I understand how this works, and am I allowed to test it?”
+â€œDo I understand how this works, and am I allowed to test it?â€
 
 ## Stop and check
 

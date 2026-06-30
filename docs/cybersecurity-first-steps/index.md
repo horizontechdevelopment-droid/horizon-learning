@@ -1,4 +1,4 @@
-# Cybersecurity First Steps
+﻿# Cybersecurity First Steps
 
 This guide is for someone who is curious about cybersecurity but is new to Linux, Kali Linux, networking, and command-line tools.
 

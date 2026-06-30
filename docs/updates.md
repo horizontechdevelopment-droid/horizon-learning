@@ -1,4 +1,4 @@
-# Updates
+﻿# Updates
 
 This page will list important updates to Horizon Learning guides.
 

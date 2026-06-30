@@ -1,4 +1,4 @@
-# Lesson Title
+﻿# Lesson Title
 
 ## Goal
 
