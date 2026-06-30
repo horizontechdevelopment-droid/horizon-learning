@@ -1,0 +1,56 @@
+site_name: Horizon Learning
+site_description: Beginner-friendly learning guides from Horizon Tech Development
+site_author: Horizon Tech Development
+site_url: https://learn.horizontechdevelopment.com/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Cybersecurity First Steps:
+      - Overview: cybersecurity-first-steps/index.md
+      - Getting Started:
+          - What Is Cybersecurity?: cybersecurity-first-steps/getting-started/what-is-cybersecurity.md
+          - Safety and Permission: cybersecurity-first-steps/getting-started/safety-and-permission.md
+          - Learning Path: cybersecurity-first-steps/getting-started/learning-path.md
+      - Kali Linux:
+          - What Is Kali?: cybersecurity-first-steps/kali/what-is-kali.md
+          - Download Kali: cybersecurity-first-steps/kali/download-kali.md
+          - Create a Live USB: cybersecurity-first-steps/kali/create-live-usb.md
+          - First Boot: cybersecurity-first-steps/kali/first-boot.md
+      - Linux Basics:
+          - Terminal Basics: cybersecurity-first-steps/linux-basics/terminal-basics.md
+          - Files and Folders: cybersecurity-first-steps/linux-basics/files-and-folders.md
+          - Useful Commands: cybersecurity-first-steps/linux-basics/useful-commands.md
+      - Networking:
+          - Networking Basics: cybersecurity-first-steps/networking/networking-basics.md
+          - Wi-Fi Basics: cybersecurity-first-steps/networking/wifi-basics.md
+          - IP Addresses and Ports: cybersecurity-first-steps/networking/ip-addresses-and-ports.md
+      - Tools:
+          - Kali Tools Overview: cybersecurity-first-steps/tools/kali-tools-overview.md
+          - Nmap: cybersecurity-first-steps/tools/nmap.md
+          - Wireshark: cybersecurity-first-steps/tools/wireshark.md
+      - Beginner Labs:
+          - Home Wi-Fi Security Check: cybersecurity-first-steps/labs/home-wifi-security-check.md
+          - First Nmap Scan: cybersecurity-first-steps/labs/first-nmap-scan.md
+          - Beginner Lab Roadmap: cybersecurity-first-steps/labs/beginner-lab-roadmap.md
+  - Downloads: downloads.md
+  - Updates: updates.md
+  - Changelog: changelog.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
