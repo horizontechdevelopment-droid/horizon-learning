@@ -1,5 +1,9 @@
 ﻿# Cybersecurity First Steps
 
+!!! Warning "Preview Notice"
+Cybersecurity First Steps is currently in early preview.
+This learning path is usable, but not complete. Feedback from early learners will help improve explanations, examples, labs, and downloadable resources.
+
 Cybersecurity First Steps is a beginner-friendly learning path for people who are curious about cybersecurity but are new to Linux, Kali Linux, networking, and command-line tools.
 
 The goal is not to rush into hacking.

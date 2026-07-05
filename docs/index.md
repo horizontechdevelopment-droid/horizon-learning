@@ -1,5 +1,9 @@
 ﻿# Horizon Learning
 
+!!! warning "Preview Notice"
+Horizon Learning is currently in early preview.
+Content is actively being written, reviewed, and improved. Some lessons may change as we receive feedback from early learners.
+
 **Learn technology one step at a time.**
 
 Horizon Learning is built for people who want to understand technology without getting overwhelmed.
