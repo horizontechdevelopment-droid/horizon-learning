@@ -6,7 +6,7 @@ Horizon Learning is built around one idea:
 
 ## Explain, do not impress
 
-Lessons should help the learner understand.
+Guides should help the learner understand.
 
 The goal is not to sound advanced.
 
@@ -20,7 +20,7 @@ A beginner may not know what Linux is, what a terminal is, what an IP address is
 
 That is okay.
 
-Lessons should meet the learner where they are.
+Guides should meet the learner where they are.
 
 ## Teach the why
 
@@ -53,7 +53,7 @@ For example:
 
 Reading is useful, but practice builds confidence.
 
-Lessons should include safe hands-on activities when possible.
+Guides should include safe hands-on activities when possible.
 
 Good practice activities are:
 
@@ -67,7 +67,7 @@ Good practice activities are:
 
 Some technical tools can affect systems, networks, or data.
 
-Lessons should clearly explain safe boundaries.
+Guides should clearly explain safe boundaries.
 
 For cybersecurity topics, the rule is simple:
 
@@ -87,10 +87,10 @@ A port is not just a number. It is a way for a device to receive a specific type
 
 Learners often quit because they cannot tell if they are making progress.
 
-Every lesson should include checkpoints so the learner knows when they are ready to continue.
+Every guide should include checkpoints so the learner knows when they are ready to continue.
 
 ## Clear next steps
 
-A good lesson should not leave the learner wondering what to do next.
+A good guide should not leave the learner wondering what to do next.
 
-Each lesson should point naturally to the next lesson, lab, checklist, or resource.
+Each guide should point naturally to the next guide, lab, checklist, or resource.

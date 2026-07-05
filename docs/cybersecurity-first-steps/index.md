@@ -80,4 +80,4 @@ Do not worry about memorizing everything immediately. Focus on understanding the
 
 Begin with:
 
-[Lesson 1: Learning Path](getting-started/learning-path.md)
+[Guide 1: Learning Path](getting-started/learning-path.md)

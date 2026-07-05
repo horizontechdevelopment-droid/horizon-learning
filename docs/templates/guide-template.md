@@ -1,8 +1,8 @@
-﻿# Lesson Title
+﻿# Guide Title
 
 ## Goal
 
-By the end of this lesson, you should understand:
+By the end of this guide, you should understand:
 
 - Point 1
 - Point 2
@@ -42,4 +42,4 @@ You are ready to continue when:
 
 ## What to do next
 
-Continue to the next lesson.
+Continue to the next guide.

@@ -39,7 +39,7 @@ Horizon Learning is designed to smooth out that process.
 
 ## How lessons are written
 
-Lessons are designed to:
+Guides are designed to:
 
 - Explain ideas in plain English
 - Avoid assuming prior experience
