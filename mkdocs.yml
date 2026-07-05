@@ -46,9 +46,15 @@ nav:
           - "Module 3 Milestone": cybersecurity-first-steps/linux-basics/module-milestone.md
 
       - "Module 4: Understanding Networks":
-          - "Lesson 13: Networking Basics": cybersecurity-first-steps/networking/networking-basics.md
-          - "Lesson 14: Wi-Fi Basics": cybersecurity-first-steps/networking/wifi-basics.md
-          - "Lesson 15: IP Addresses and Ports": cybersecurity-first-steps/networking/ip-addresses-and-ports.md
+          - "Welcome": cybersecurity-first-steps/networking/index.md
+          - "Guide 16: What Is a Network?": cybersecurity-first-steps/networking/what-is-a-network.md
+          - "Guide 17: Wi-Fi vs Ethernet": cybersecurity-first-steps/networking/wifi-vs-ethernet.md
+          - "Guide 18: Understanding IP Addresses": cybersecurity-first-steps/networking/understanding-ip-addresses.md
+          - "Guide 19: Understanding Ports": cybersecurity-first-steps/networking/understanding-ports.md
+          - "Guide 20: How Devices Find Each Other (DNS)": cybersecurity-first-steps/networking/how-devices-find-each-other.md
+          - "Guide 21: Understanding Your Home Network": cybersecurity-first-steps/networking/understanding-your-home-network.md
+          - "Module 4 Review": cybersecurity-first-steps/networking/module-review.md
+          - "Module 4 Milestone": cybersecurity-first-steps/networking/module-milestone.md
 
       - "Module 5: Your First Security Tools":
           - "Lesson 16: Kali Tools Overview": cybersecurity-first-steps/tools/kali-tools-overview.md
