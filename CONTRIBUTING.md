@@ -40,6 +40,22 @@ Lessons should include:
 - Lesson summary
 - What to do next
 
+## Platform Support
+
+Do not assume every learner uses Windows.
+
+Lessons should follow:
+
+    internal/standards/platform-support-standard.md
+
+When steps differ by operating system, clearly separate instructions for:
+
+- Windows
+- Linux
+- macOS
+
+Teach the concept once, then branch by platform only when needed.
+
 ## Review Standard
 
 Before a lesson is considered complete, review it using:

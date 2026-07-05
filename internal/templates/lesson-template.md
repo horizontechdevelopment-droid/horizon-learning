@@ -67,6 +67,19 @@ None
 
 ---
 
+# Platform Support
+
+State whether the lesson is:
+
+- Universal
+- Platform-Aware
+- Platform-Specific
+- Tool-Specific
+
+If the lesson is platform-aware, include a "Choose Your Platform" section in the main lesson.
+
+---
+
 # Learning Objectives
 
 Use action-oriented objectives.
