@@ -1,3 +1,18 @@
+Current Sprint
+
+Goal:
+Private Preview v0.1
+
+Target:
+
+✅ Modules 1–5 complete
+
+✅ Basic downloads
+
+✅ Feedback ready
+
+Everything else waits.
+
 Phase 0
 ✔ Foundation
 
