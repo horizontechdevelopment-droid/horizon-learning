@@ -36,9 +36,14 @@ nav:
 
       - "Module 3: Learning Your Way Around Linux":
           - "Welcome": cybersecurity-first-steps/linux-basics/index.md
-          - "Lesson 10: Terminal Basics": cybersecurity-first-steps/linux-basics/terminal-basics.md
-          - "Lesson 11: Files and Folders": cybersecurity-first-steps/linux-basics/files-and-folders.md
-          - "Lesson 12: Useful Commands": cybersecurity-first-steps/linux-basics/useful-commands.md
+          - "Guide 10: Terminal Basics": cybersecurity-first-steps/linux-basics/terminal-basics.md
+          - "Guide 11: Files and Folders": cybersecurity-first-steps/linux-basics/files-and-folders.md
+          - "Guide 12: Useful Commands": cybersecurity-first-steps/linux-basics/useful-commands.md
+          - "Guide 13: Finding Help": cybersecurity-first-steps/linux-basics/finding-help.md
+          - "Guide 14: Creating and Managing Files": cybersecurity-first-steps/linux-basics/creating-and-managing-files.md
+          - "Guide 15: Understanding Permissions": cybersecurity-first-steps/linux-basics/understanding-permissions.md
+          - "Module 3 Review": cybersecurity-first-steps/linux-basics/module-review.md
+          - "Module 3 Milestone": cybersecurity-first-steps/linux-basics/module-milestone.md
 
       - "Module 4: Understanding Networks":
           - "Lesson 13: Networking Basics": cybersecurity-first-steps/networking/networking-basics.md
