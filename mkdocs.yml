@@ -31,6 +31,7 @@ nav:
         - "Lesson 5: Download Kali": cybersecurity-first-steps/kali/download-kali.md
         - "Lesson 6: Create a Live USB": cybersecurity-first-steps/kali/create-live-usb.md
         - "Lesson 7: First Boot": cybersecurity-first-steps/kali/first-boot.md
+        - "Lesson 8: Updating Kali Linux": cybersecurity-first-steps/kali/updating-kali.md
 
     - "Module 3: Linux Basics":
         - "Lesson 8: Terminal Basics": cybersecurity-first-steps/linux-basics/terminal-basics.md
