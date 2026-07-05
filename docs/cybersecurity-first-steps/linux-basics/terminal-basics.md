@@ -1,18 +1,68 @@
-﻿# Terminal Basics
+﻿---
+title: Terminal Basics
+module: Getting Comfortable with Linux
+lesson: 10
+difficulty: Beginner
+estimated_time: 20–30 minutes
+last_reviewed: 2026-07
+platform_support: Kali-Specific
+prerequisites:
+  - Starting Kali for the First Time
+  - Shutting Down Kali Safely
+tags:
+  - kali
+  - linux
+  - terminal
+  - commands
+  - beginner
+---
+
+# Lesson 10: Terminal Basics
+
+**Estimated Time:** 20–30 minutes
+
+**Difficulty:** Beginner
+
+**Platform Support:** Kali Linux
+
+---
+
+## Learning Objectives
+
+By the end of this lesson, you should be able to:
+
+- Explain what the terminal is.
+- Open the terminal in Kali.
+- Understand what a command is.
+- Run a few safe beginner commands.
+- Recognize basic command output.
+- Avoid blindly copying commands from the internet.
+
+---
 
 ## Goal
 
-Learn what the terminal is, why Kali uses it, and how to run a few safe beginner commands.
+Become comfortable opening the terminal and running your first basic Linux commands.
 
-## Why this matters
+---
+
+## Why This Matters
 
 Many cybersecurity tools are controlled from the terminal.
 
 If the terminal feels confusing, Kali will feel confusing.
 
-This lesson builds the basic comfort needed before using tools like Nmap.
+You do not need to become an expert today. The goal is to make the terminal feel less intimidating.
 
-## Plain-English explanation
+!!! tip
+
+    The terminal is not magic.
+
+    It is just another way to tell the computer what you want it to do.
+
+---
+
+## Plain-English Explanation
 
 The terminal is a text-based way to control the computer.
 
@@ -22,7 +72,9 @@ A command is an instruction.
 
 The computer reads the command, does what it was told, and then shows output.
 
-## New terms
+---
+
+## New Terms
 
 - **Terminal:** A window where you type commands.
 - **Command:** An instruction typed into the terminal.
@@ -31,7 +83,9 @@ The computer reads the command, does what it was told, and then shows output.
 - **Directory:** Another word for folder.
 - **Current directory:** The folder you are currently working in.
 
-## What the prompt means
+---
+
+## What the Prompt Means
 
 When you open the terminal, you may see something like:
 
@@ -50,18 +104,24 @@ You do not need to fully understand every part yet.
 
 For now, just know that the prompt means:
 
-    The terminal is ready.
+> The terminal is ready.
 
-## Step 1: Open the terminal
+---
+
+## Step 1: Open the Terminal
 
 In Kali, open the terminal by:
 
-1. Looking for the terminal icon.
-2. Or opening the application menu.
+1. Looking for the Terminal icon.
+2. Or opening the Applications menu.
 3. Searching for Terminal.
 4. Clicking the Terminal app.
 
-## Step 2: Run your first command
+A terminal window should open.
+
+---
+
+## Step 2: Run Your First Command
 
 Type:
 
@@ -81,7 +141,9 @@ You may see something like:
 
 That means you are in the Kali user's home folder.
 
-## Step 3: List files and folders
+---
+
+## Step 3: List Files and Folders
 
 Type:
 
@@ -91,9 +153,13 @@ Press Enter.
 
 This command lists files and folders in your current directory.
 
-If nothing appears, that may mean the folder is empty.
+If nothing appears, the folder may be empty.
 
-## Step 4: Clear the screen
+That is normal.
+
+---
+
+## Step 4: Clear the Screen
 
 Type:
 
@@ -107,7 +173,9 @@ It does not delete files.
 
 It only cleans up what you see in the terminal window.
 
-## Step 5: Check your username
+---
+
+## Step 5: Check Your Username
 
 Type:
 
@@ -121,15 +189,34 @@ You may see:
 
     kali
 
-## Important safety rule
+---
 
-Do not copy and paste random commands from the internet.
+!!! warning
 
-Some commands can delete files, change settings, install unsafe software, or break things.
+    Do not copy and paste random commands from the internet.
 
-If you do not understand what a command does, pause and look it up first.
+    Some commands can delete files, change settings, install unsafe software, or break things.
 
-## Try it yourself
+    If you do not understand what a command does, pause and look it up first.
+
+---
+
+## Behind the Curtain
+
+When you press Enter, the shell reads your command and tries to run it.
+
+A shell is the program that accepts typed commands and sends them to the operating system.
+
+You do not need to memorize that today.
+
+For now, remember:
+
+> Terminal is the window.
+> Shell is the command interpreter inside it.
+
+---
+
+## Try It Yourself
 
 Run these commands in order:
 
@@ -137,22 +224,39 @@ Run these commands in order:
     ls
     whoami
     clear
-
-Then run:
-
     pwd
 
 Notice that `clear` did not move you or delete anything.
 
-## Common mistakes
+It only cleared the screen.
 
-- Typing uppercase letters when the command should be lowercase
-- Forgetting to press Enter
-- Thinking `clear` deletes files
-- Copying commands without understanding them
-- Getting nervous when the terminal shows a lot of text
+---
+
+## Reflection Questions
+
+Try answering these without looking back:
+
+1. What is the terminal?
+2. What is a command?
+3. What does `pwd` show?
+4. What does `ls` show?
+5. Why should you avoid copying random commands from the internet?
+
+---
+
+## Common Mistakes
+
+- Typing uppercase letters when the command should be lowercase.
+- Forgetting to press Enter.
+- Thinking `clear` deletes files.
+- Copying commands without understanding them.
+- Getting nervous when the terminal shows a lot of text.
+
+---
 
 ## Troubleshooting
+
+## Command Not Found
 
 If a command says:
 
@@ -170,7 +274,17 @@ is not the same as:
 
     PWD
 
-## Stop and check
+---
+
+## Nothing Happens
+
+Some commands only show output when something important happens.
+
+If the prompt returns and there is no error, the command may have completed successfully.
+
+---
+
+## Stop and Check
 
 You are ready to continue when:
 
@@ -178,14 +292,27 @@ You are ready to continue when:
 - [ ] You can run `pwd`.
 - [ ] You can run `ls`.
 - [ ] You can run `whoami`.
+- [ ] You understand that `clear` only clears the screen.
 - [ ] You understand that commands should not be blindly copied.
 
-## Summary
+---
 
-The terminal is a way to control Linux by typing commands.
+## Lesson Summary
 
-You learned how to find your current folder, list files, clear the screen, and check your username.
+In this lesson you learned:
 
-## What to do next
+- The terminal lets you control Linux by typing commands.
+- A command is an instruction.
+- `pwd` shows your current folder.
+- `ls` lists files and folders.
+- `whoami` shows the current user.
+- `clear` clears the terminal screen.
+- Commands should be understood before they are copied and run.
 
-Continue to Lesson 9: Files and Folders.
+---
+
+## What To Do Next
+
+Continue to **Lesson 11 – Files and Folders**.
+
+Next, you will learn how Linux organizes files and how to move through folders from the terminal.
