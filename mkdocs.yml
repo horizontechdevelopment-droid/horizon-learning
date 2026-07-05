@@ -39,7 +39,7 @@ nav:
           - "Lesson 11: Files and Folders": cybersecurity-first-steps/linux-basics/files-and-folders.md
           - "Lesson 12: Useful Commands": cybersecurity-first-steps/linux-basics/useful-commands.md
 
-      - "Module 4: Networking Basics":
+      - "Module 4: Understanding Networks":
           - "Lesson 13: Networking Basics": cybersecurity-first-steps/networking/networking-basics.md
           - "Lesson 14: Wi-Fi Basics": cybersecurity-first-steps/networking/wifi-basics.md
           - "Lesson 15: IP Addresses and Ports": cybersecurity-first-steps/networking/ip-addresses-and-ports.md
