@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "redhat.vscode-yaml",
+        "eamodio.gitlens",
+        "usernamehw.errorlens",
+        "streetsidesoftware.code-spell-checker",
+        "PKief.material-icon-theme",
+        "shd101wyy.markdown-preview-enhanced"
+    ]
+}

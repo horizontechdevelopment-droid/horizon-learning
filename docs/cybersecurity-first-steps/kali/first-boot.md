@@ -1,202 +1,404 @@
-﻿# First Boot
+﻿---
+title: Starting Kali for the First Time
+module: Kali Linux
+lesson: 7
+difficulty: Beginner
+estimated_time: 25–35 minutes
+last_reviewed: 2026-07
+platform_support: Platform-Aware
+prerequisites:
+  - Download Kali
+  - Verify Your Download
+  - Create a Live USB
+tags:
+  - kali
+  - boot
+  - bios
+  - uefi
+  - live-usb
+  - beginner
+---
+
+# Lesson 7: Starting Kali for the First Time
+
+**Estimated Time:** 25–35 minutes
+
+**Difficulty:** Beginner
+
+**Platform Support:** Windows, Linux, and macOS computers using a Kali Live USB
+
+---
+
+## Learning Objectives
+
+By the end of this lesson you should be able to:
+
+- Explain what "booting" means.
+- Understand the difference between a Boot Menu and Boot Order.
+- Recognize BIOS and UEFI.
+- Start your computer from the Kali Live USB.
+- Choose the correct boot option.
+- Become comfortable with the Kali desktop.
+
+---
 
 ## Goal
 
-Boot into Kali Linux from the live USB.
+Start Kali Linux from the Live USB without installing it on your computer.
 
-## Why this matters
+---
 
-Creating the USB does not automatically start Kali.
+## Why This Matters
 
-You still need to tell the computer to boot from the USB drive instead of booting into Windows like normal.
+This is the moment many new learners are nervous about.
 
-This lesson walks through that process slowly.
+That is completely normal.
 
-## Plain-English explanation
+The good news is that you are **not** replacing your current operating system.
 
-When a computer turns on, it looks for something to start.
+Today you are simply asking your computer to start from the USB drive instead of its internal drive.
 
-Normally, it finds the internal drive and starts Windows.
+When you remove the USB and restart normally, your computer should return to its usual operating system.
 
-For this lesson, you will use the boot menu to tell the computer:
+!!! success
 
-    Start from the USB drive this time.
+    Congratulations!
 
-This does not erase Windows.
+    You have already completed the hardest preparation steps.
 
-It only changes what the computer starts from for this boot.
+    Now it's time to see Kali Linux for the first time.
 
-## New terms
+---
 
-- **Boot:** Start the computer.
-- **Boot menu:** A temporary menu that lets you choose what device to start from.
-- **BIOS/UEFI:** The low-level system menu built into the computer.
-- **Live mode:** Running Kali from the USB without installing it.
-- **Secure Boot:** A security feature that can sometimes prevent unsigned or unfamiliar operating systems from booting.
+# Plain-English Explanation
 
-## Before you start
+When you press the power button on a computer, it doesn't immediately start Windows, Linux, or macOS.
 
-Save any open work in Windows.
+Instead, the computer first checks its hardware and decides **where to start**.
 
-Close your programs.
+Normally, it starts from the internal storage drive.
 
-Keep the Kali USB plugged in.
+Today, we're going to tell it to start from the Kali USB instead.
 
-## Step 1: Restart the computer
+That's all "booting from a USB" really means.
 
-With the Kali USB inserted, restart the computer.
+---
 
-You need to open the boot menu before Windows starts.
+# New Terms
 
-## Step 2: Open the boot menu
+- Boot
+- Bootable USB
+- BIOS
+- UEFI
+- Boot Menu
+- Boot Order
+- Live System
 
-As soon as the computer starts turning back on, repeatedly tap the boot menu key.
+---
 
-Common boot menu keys include:
+# What Happens When a Computer Starts?
+
+A simplified version looks like this:
+
+```
+Power Button
+
+↓
+
+Computer turns on
+
+↓
+
+Hardware is checked
+
+↓
+
+Startup firmware begins
+
+↓
+
+Choose a boot device
+
+↓
+
+Operating system starts
+```
+
+Normally, your computer chooses the internal drive.
+
+Today, you'll temporarily choose the Kali USB.
+
+---
+
+# BIOS vs UEFI
+
+You may hear both of these terms.
+
+### BIOS
+
+Older computers commonly used BIOS.
+
+### UEFI
+
+Most modern computers use UEFI.
+
+For this lesson, you only need to know one thing:
+
+Both help your computer start.
+
+You do **not** need to become an expert on firmware today.
+
+!!! tip
+
+    Don't worry if you're unsure whether your computer uses BIOS or UEFI.
+
+    The learning process is nearly identical.
+
+---
+
+# Boot Menu vs Boot Order
+
+These are often confused.
+
+| Boot Menu | Boot Order |
+|------------|------------|
+| Temporary choice | Permanent preference |
+| Used once | Used every startup |
+| Recommended for beginners | Usually leave unchanged |
+
+For this course...
+
+**Use the Boot Menu whenever possible.**
+
+It lets you choose the USB for this startup only.
+
+---
+
+# Common Boot Menu Keys
+
+Different manufacturers use different keys.
+
+Some common examples include:
 
 - F12
 - F11
 - F10
+- F9
 - Esc
 - Del
 
-The correct key depends on the computer brand.
+!!! note
 
-Common examples:
+    If you're unsure which key your computer uses, check the manufacturer's support page or user manual.
 
-- Dell: F12
-- Lenovo: F12 or Enter, then boot menu
-- HP: Esc, then F9
-- ASUS: Esc or F8
-- Acer: F12
-- MSI: F11
+    It is completely normal to look this up.
 
-If none of these work, search for:
+---
 
-    boot menu key for [computer brand and model]
+# Secure Boot
 
-## Step 3: Choose the USB drive
+Many computers include a feature called Secure Boot.
 
-In the boot menu, look for the USB drive.
+Secure Boot helps protect the startup process by allowing only trusted boot software to run.
 
-It may show the USB brand name, such as SanDisk, Samsung, Kingston, PNY, or another brand.
+Some computers can boot Kali without any changes.
 
-It may also say:
+Others may require additional configuration depending on the hardware and firmware.
 
-    UEFI USB
+For this lesson:
 
-Choose the USB drive.
+**Do not change Secure Boot settings unless you actually encounter a problem.**
 
-## Step 4: Choose the Kali live option
+!!! warning
 
-After selecting the USB drive, the Kali boot menu should appear.
+    Avoid disabling security features simply because a tutorial says to.
 
-Choose the live option.
+    Understand **why** a change is needed before making it.
 
-The exact wording may vary, but look for something like:
+---
 
-    Live system
+# Starting the Kali USB
 
-or:
+Insert your Kali USB drive.
 
-    Kali Live
+Restart the computer.
 
-Do not choose install for this beginner path.
+Open the Boot Menu.
 
-## Step 5: Wait for Kali to load
+Select the USB drive.
 
-Kali may take a few minutes to start from USB.
+After a few moments, you should see the Kali boot menu.
 
-This can be slower than starting Windows from the internal drive.
+---
 
-Wait until the Kali desktop appears.
+# The Kali Boot Menu
 
-## Step 6: Confirm you are in Kali
+You may see options similar to:
 
-Once the desktop loads, look for:
+- Live System
+- Live System (Failsafe)
+- Installer
+- Graphical Installer
 
-- Kali logo or wallpaper
-- Application menu
-- Terminal icon
-- Linux-style desktop environment
+For this learning path:
 
-You are now running Kali from the USB.
+**Choose:**
 
-## Important note
+> Live System
 
-In normal live mode, changes may not be saved after reboot.
+This allows you to explore Kali without installing it.
 
-That means if you create files or change settings, they may disappear when you shut down.
+---
 
-This is normal.
+!!! info "Behind the Curtain"
 
-Persistence can be added later, but it is not required for the first beginner lessons.
+    The Live System runs directly from the USB drive.
 
-## If the USB does not appear
+    Nothing is permanently installed on your internal storage.
+
+    This makes it an excellent way to learn safely.
+
+---
+
+# Welcome to Kali
+
+After Kali finishes loading, take a moment to look around.
+
+You should see:
+
+- Desktop
+- Applications menu
+- Terminal
+- File manager
+- Network icon
+- Clock
+- Power menu
+
+Today, don't worry about learning everything.
+
+Simply become comfortable looking around.
+
+---
+
+# Your First Goal
+
+Try these simple tasks:
+
+- Move the mouse.
+- Open the Applications menu.
+- Open the Terminal.
+- Close the Terminal.
+- Open the File Manager.
+- Return to the desktop.
+
+That's enough for today.
+
+---
+
+# Common Problems
+
+## The USB Doesn't Appear
 
 Try:
 
-- Restarting and opening the boot menu again
-- Trying a different USB port
-- Recreating the USB
-- Removing other USB drives
-- Checking whether the USB writing process completed successfully
-- Looking up the boot menu key for the exact computer model
+- Reinsert the USB drive.
+- Restart the computer.
+- Use a different USB port.
+- Confirm the USB was written successfully.
 
-## If Kali does not start
+---
 
-Possible causes include:
+## The Computer Starts Windows Instead
 
-- The USB was not created correctly
-- The wrong boot option was selected
-- Secure Boot is blocking the USB
-- The download was incomplete
-- The computer needs a different boot setting
+Usually this means the USB wasn't selected.
 
-Do not panic.
+Restart and try the Boot Menu again.
 
-This is a common beginner problem.
+---
 
-## Secure Boot note
+## Black Screen
 
-Some computers have Secure Boot enabled.
+Wait several minutes.
 
-Secure Boot is designed to prevent unauthorized operating systems from starting.
+If nothing changes:
 
-If Kali will not boot, Secure Boot may be involved.
+- Restart.
+- Try Live System (Failsafe).
+- Verify the USB creation process.
 
-Do not change BIOS or UEFI settings unless you are comfortable and understand what you are changing.
+---
 
-If you are unsure, ask for help before changing boot or security settings.
+## Keyboard Doesn't Work
 
-## Getting back to Windows
+Try another USB port.
 
-To return to Windows:
+Some very new hardware may require a newer Kali image.
 
-1. Shut down Kali.
-2. Remove the USB drive.
-3. Turn the computer back on.
+---
 
-The computer should boot back into Windows normally.
+# Try It Yourself
 
-## Common mistakes
+Complete the following:
 
-- Waiting too long to press the boot menu key
-- Choosing the internal Windows drive instead of the USB
-- Choosing install instead of live mode
-- Removing the USB while Kali is running
-- Thinking Windows was deleted because Kali started
+- Boot Kali from the USB.
+- Reach the desktop.
+- Open the Applications menu.
+- Open and close the Terminal.
+- Open the File Manager.
+- Shut down Kali from the menu.
 
-## Stop and check
+Do not install Kali.
+
+Simply explore.
+
+---
+
+# Reflection Questions
+
+Without looking back:
+
+1. What does "booting" mean?
+2. Why do we use the Boot Menu instead of changing Boot Order?
+3. What is Secure Boot?
+4. Why are we choosing Live System instead of Installer?
+5. Why is using a Live USB a safe way to learn?
+
+---
+
+# Stop and Check
 
 You are ready to continue when:
 
-- [ ] You can open the boot menu.
-- [ ] You can select the Kali USB.
-- [ ] You can start Kali in live mode.
-- [ ] You understand this does not erase Windows.
-- [ ] You know how to return to Windows.
+- [ ] Kali started successfully.
+- [ ] You reached the desktop.
+- [ ] The mouse works.
+- [ ] The keyboard works.
+- [ ] You opened the Applications menu.
+- [ ] You opened the Terminal.
+- [ ] You opened the File Manager.
+- [ ] You shut Kali down normally.
 
-## What to do next
+---
 
-Continue to Lesson 8: Terminal Basics.
+# Lesson Summary
+
+In this lesson you learned:
+
+- What "booting" means.
+- The difference between Boot Menu and Boot Order.
+- The purpose of BIOS and UEFI.
+- Why we use Live System.
+- How to explore Kali without installing it.
+
+---
+
+# What To Do Next
+
+Continue to **Lesson 8 – Updating Kali Linux**.
+
+You'll learn:
+
+- Why updates matter.
+- How Linux installs software.
+- How package managers work.
+- How to safely update Kali.

@@ -1,6 +1,18 @@
+# Python
 .venv/
-site/
 __pycache__/
 *.pyc
+
+# MkDocs
+site/
+
+# VS Code local
+.vscode/*.log
+
+# OS
 .DS_Store
 Thumbs.db
+
+# Temporary
+*.tmp
+*.bak
