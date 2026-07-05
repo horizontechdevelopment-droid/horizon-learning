@@ -1,38 +1,55 @@
 ﻿# Beginner Progress Checklist
 
-Use this checklist to track your progress.
+Use this checklist to track your progress through Cybersecurity First Steps.
 
-## Getting started
+## Module 1: Getting Started
 
-- [ ] I read the safety and permission page
-- [ ] I understand that I should only test systems I own or have permission to test
-- [ ] I understand what cybersecurity means
-- [ ] I understand what Kali Linux is
+- [ ] Lesson 1: Learning Path
+- [ ] Lesson 2: What Is Cybersecurity?
+- [ ] Lesson 3: Safety and Permission
 
-## Kali setup
+## Module 2: Kali Linux
 
-- [ ] I downloaded Kali from the official website
-- [ ] I created a live USB
-- [ ] I booted into Kali
-- [ ] I found the terminal
+- [ ] Lesson 4: What Is Kali?
+- [ ] Lesson 5: Download Kali
+- [ ] Lesson 6: Create a Live USB
+- [ ] Lesson 7: First Boot
 
-## Linux basics
+## Module 3: Linux Basics
 
-- [ ] I can open the terminal
-- [ ] I can use `pwd`
-- [ ] I can use `ls`
-- [ ] I can use `cd`
-- [ ] I can understand basic file paths
+- [ ] Lesson 8: Terminal Basics
+- [ ] Lesson 9: Files and Folders
+- [ ] Lesson 10: Useful Commands
 
-## Networking basics
+## Module 4: Networking Basics
 
-- [ ] I understand what a router is
-- [ ] I understand what an IP address is
-- [ ] I understand what a port is
-- [ ] I understand what Wi-Fi encryption means
+- [ ] Lesson 11: Networking Basics
+- [ ] Lesson 12: Wi-Fi Basics
+- [ ] Lesson 13: IP Addresses and Ports
 
-## First labs
+## Module 5: Beginner Tools
 
-- [ ] I completed the Home Wi-Fi Security Check
-- [ ] I completed the First Nmap Scan
-- [ ] I wrote down what I learned
+- [ ] Lesson 14: Kali Tools Overview
+- [ ] Lesson 15: Nmap
+- [ ] Lesson 16: Wireshark
+
+## Module 6: Safe Practice Labs
+
+- [ ] Lesson 17: Home Wi-Fi Security Check
+- [ ] Lesson 18: First Nmap Scan
+- [ ] Lesson 19: Beginner Lab Roadmap
+
+## Beginner skills checkpoint
+
+By the end of this learning path, you should be able to:
+
+- [ ] Explain what cybersecurity means
+- [ ] Explain why permission matters
+- [ ] Describe what Kali Linux is used for
+- [ ] Open a Linux terminal
+- [ ] Use basic commands like `pwd`, `ls`, and `cd`
+- [ ] Explain what an IP address is
+- [ ] Explain what a port is
+- [ ] Run a basic Nmap scan against your own computer or router
+- [ ] Open Wireshark and recognize that it shows network traffic
+- [ ] Complete a safe home Wi-Fi security review

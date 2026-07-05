@@ -8,8 +8,7 @@ Understand how files and folders are organized in Linux.
 
 Before using Kali tools, you need to understand where files are saved, how to move between folders, and how Linux paths work.
 
-This helps you avoid getting lost in the terminal.
-
+This helps you avoid getting lost in the terminal and ensures you can navigate confidently as you start using Linux for cybersecurity tasks.
 ## Plain-English explanation
 
 Linux stores files in folders, just like Windows.
@@ -40,6 +39,8 @@ Windows usually uses backslashes:
 - **Path:** The location of a file or folder.
 - **Home folder:** Your personal user folder.
 - **Root directory:** The top of the Linux file system.
+- **Absolute path:** A path that starts from the root directory (e.g., `/home/kali/Downloads`).
+- **Relative path:** A path that starts from your current location (e.g., `Downloads` or `~/Downloads`).
 
 ## Important Linux locations
 
