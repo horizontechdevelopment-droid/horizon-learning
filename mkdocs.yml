@@ -30,7 +30,7 @@ nav:
           - "Lesson 4: What Is Kali?": cybersecurity-first-steps/kali/what-is-kali.md
           - "Lesson 5: Download Kali": cybersecurity-first-steps/kali/download-kali.md
           - "Lesson 6: Create a Live USB": cybersecurity-first-steps/kali/create-live-usb.md
-          - "Lesson 7: First Boot": cybersecurity-first-steps/kali/first-boot.md
+          - "Lesson 7: Starting Kali for the First Time": cybersecurity-first-steps/kali/first-boot.md
           - "Lesson 8: Updating Kali Linux": cybersecurity-first-steps/kali/updating-kali.md
           - "Lesson 9: Shutting Down Kali Safely": cybersecurity-first-steps/kali/shutting-down-kali.md
 
