@@ -385,16 +385,6 @@ The USB is now designed to boot Kali, not act like a normal storage drive.
 
 ---
 
-!!! note "Don't Worry About Installing Kali Yet"
-
-    You may notice that Kali includes options to install the operating system.
-
-    For this course, we are intentionally **not** installing Kali yet.
-
-    We'll spend time learning in the Live environment first.
-
-    After you've become comfortable with Kali, we'll compare all of the available installation methods so you can make an informed decision.
-
 # Troubleshooting
 
 ## The USB writing tool does not see the USB drive
