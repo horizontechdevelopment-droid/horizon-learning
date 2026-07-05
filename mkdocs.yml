@@ -35,24 +35,24 @@ nav:
           - "Lesson 9: Shutting Down Kali Safely": cybersecurity-first-steps/kali/shutting-down-kali.md
 
       - "Module 3: Linux Basics":
-          - "Lesson 8: Terminal Basics": cybersecurity-first-steps/linux-basics/terminal-basics.md
-          - "Lesson 9: Files and Folders": cybersecurity-first-steps/linux-basics/files-and-folders.md
-          - "Lesson 10: Useful Commands": cybersecurity-first-steps/linux-basics/useful-commands.md
+          - "Lesson 10: Terminal Basics": cybersecurity-first-steps/linux-basics/terminal-basics.md
+          - "Lesson 11: Files and Folders": cybersecurity-first-steps/linux-basics/files-and-folders.md
+          - "Lesson 12: Useful Commands": cybersecurity-first-steps/linux-basics/useful-commands.md
 
       - "Module 4: Networking Basics":
-          - "Lesson 11: Networking Basics": cybersecurity-first-steps/networking/networking-basics.md
-          - "Lesson 12: Wi-Fi Basics": cybersecurity-first-steps/networking/wifi-basics.md
-          - "Lesson 13: IP Addresses and Ports": cybersecurity-first-steps/networking/ip-addresses-and-ports.md
+          - "Lesson 13: Networking Basics": cybersecurity-first-steps/networking/networking-basics.md
+          - "Lesson 14: Wi-Fi Basics": cybersecurity-first-steps/networking/wifi-basics.md
+          - "Lesson 15: IP Addresses and Ports": cybersecurity-first-steps/networking/ip-addresses-and-ports.md
 
       - "Module 5: Beginner Tools":
-          - "Lesson 14: Kali Tools Overview": cybersecurity-first-steps/tools/kali-tools-overview.md
-          - "Lesson 15: Nmap": cybersecurity-first-steps/tools/nmap.md
-          - "Lesson 16: Wireshark": cybersecurity-first-steps/tools/wireshark.md
+          - "Lesson 16: Kali Tools Overview": cybersecurity-first-steps/tools/kali-tools-overview.md
+          - "Lesson 17: Nmap": cybersecurity-first-steps/tools/nmap.md
+          - "Lesson 18: Wireshark": cybersecurity-first-steps/tools/wireshark.md
 
       - "Module 6: Safe Practice Labs":
-          - "Lesson 17: Home Wi-Fi Security Check": cybersecurity-first-steps/labs/home-wifi-security-check.md
-          - "Lesson 18: First Nmap Scan": cybersecurity-first-steps/labs/first-nmap-scan.md
-          - "Lesson 19: Beginner Lab Roadmap": cybersecurity-first-steps/labs/beginner-lab-roadmap.md
+          - "Lesson 19: Home Wi-Fi Security Check": cybersecurity-first-steps/labs/home-wifi-security-check.md
+          - "Lesson 20: First Nmap Scan": cybersecurity-first-steps/labs/first-nmap-scan.md
+          - "Lesson 21: Beginner Lab Roadmap": cybersecurity-first-steps/labs/beginner-lab-roadmap.md
 
       - Resources:
           - Beginner Progress Checklist: cybersecurity-first-steps/checklists/beginner-progress-checklist.md
