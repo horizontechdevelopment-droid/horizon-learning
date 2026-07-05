@@ -182,57 +182,57 @@ Linux Mint often includes a tool called:
 
 Basic steps:
 
-1. Insert the USB drive.
+1.  Insert the USB drive.
 
-2. Open the application menu.
+2.  Open the application menu.
 
-3. Search for:
+3.  Search for:
 
         USB Image Writer
 
-4. Open USB Image Writer.
+4.  Open USB Image Writer.
 
-5. Select the Kali ISO file.
+5.  Select the Kali ISO file.
 
-6. Select the USB drive.
+6.  Select the USB drive.
 
-7. Confirm the selected drive is correct.
+7.  Confirm the selected drive is correct.
 
-8. Start writing the image.
+8.  Start writing the image.
 
-9. Wait until the process finishes.
+9.  Wait until the process finishes.
 
 10. Safely eject the USB drive.
 
 ---
 
-## Pop!_OS
+## Pop!\_OS
 
-Pop!_OS may use a tool called:
+Pop!\_OS may use a tool called:
 
     Popsicle
 
 Basic steps:
 
-1. Insert the USB drive.
+1.  Insert the USB drive.
 
-2. Open the application menu.
+2.  Open the application menu.
 
-3. Search for:
+3.  Search for:
 
         Popsicle
 
-4. Open Popsicle.
+4.  Open Popsicle.
 
-5. Select the Kali ISO file.
+5.  Select the Kali ISO file.
 
-6. Select the USB drive.
+6.  Select the USB drive.
 
-7. Confirm the selected drive is correct.
+7.  Confirm the selected drive is correct.
 
-8. Start the write process.
+8.  Start the write process.
 
-9. Wait until it finishes.
+9.  Wait until it finishes.
 
 10. Safely eject the USB drive.
 
@@ -246,25 +246,25 @@ Some Linux systems include:
 
 Basic steps:
 
-1. Insert the USB drive.
+1.  Insert the USB drive.
 
-2. Open Disks.
+2.  Open Disks.
 
-3. Select the USB drive from the left side.
+3.  Select the USB drive from the left side.
 
-4. Open the menu.
+4.  Open the menu.
 
-5. Choose an option like:
+5.  Choose an option like:
 
         Restore Disk Image
 
-6. Select the Kali ISO file.
+6.  Select the Kali ISO file.
 
-7. Confirm the USB drive is correct.
+7.  Confirm the USB drive is correct.
 
-8. Start the restore/write process.
+8.  Start the restore/write process.
 
-9. Wait until it finishes.
+9.  Wait until it finishes.
 
 10. Safely eject the USB drive.
 
@@ -384,6 +384,16 @@ The USB is now designed to boot Kali, not act like a normal storage drive.
 - Choosing advanced terminal methods too early.
 
 ---
+
+!!! note "Don't Worry About Installing Kali Yet"
+
+    You may notice that Kali includes options to install the operating system.
+
+    For this course, we are intentionally **not** installing Kali yet.
+
+    We'll spend time learning in the Live environment first.
+
+    After you've become comfortable with Kali, we'll compare all of the available installation methods so you can make an informed decision.
 
 # Troubleshooting
 

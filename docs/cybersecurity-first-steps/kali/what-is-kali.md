@@ -4,6 +4,35 @@
 
 Understand what Kali Linux is and what it is used for.
 
+## Why This Matters
+
+Kali Linux can look intimidating at first because it includes many security tools.
+
+This lesson explains what Kali is, what it is not, and why we are starting with a Live USB instead of immediately installing it.
+
+The goal is to understand Kali as a learning environment, not treat it like a magic hacking system.
+
+!!! info "Your Kali Journey"
+
+    There are several ways to use Kali Linux.
+
+    In this learning path, we will introduce them one at a time so you can choose what works best for you.
+
+    We will begin with the safest and easiest option:
+
+    - Live USB
+
+    Later, we will also cover:
+
+    - Live USB with Persistence
+    - Virtual Machines
+    - Dual Boot
+    - Dedicated Installation
+
+    For now, you do not need to choose a permanent setup.
+
+    Start with the Live USB path, learn the basics, and make a long-term decision later.
+
 ## Plain-English explanation
 
 Kali Linux is a special version of Linux made for cybersecurity work.

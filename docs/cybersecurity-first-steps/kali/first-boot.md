@@ -160,10 +160,10 @@ You do **not** need to become an expert on firmware today.
 
 These are often confused.
 
-| Boot Menu | Boot Order |
-|------------|------------|
-| Temporary choice | Permanent preference |
-| Used once | Used every startup |
+| Boot Menu                 | Boot Order              |
+| ------------------------- | ----------------------- |
+| Temporary choice          | Permanent preference    |
+| Used once                 | Used every startup      |
 | Recommended for beginners | Usually leave unchanged |
 
 For this course...
@@ -173,6 +173,20 @@ For this course...
 It lets you choose the USB for this startup only.
 
 ---
+
+## Why We Are Choosing Live System
+
+The Kali boot menu may show install options.
+
+For this learning path, choose:
+
+    Live System
+
+We are choosing Live System because it lets you explore Kali without making permanent changes to your computer.
+
+Do not choose Installer or Graphical Installer for this course unless a later lesson specifically tells you to.
+
+We will compare long-term setup options later, including persistent USB, virtual machines, dual boot, and full installation.
 
 # Common Boot Menu Keys
 

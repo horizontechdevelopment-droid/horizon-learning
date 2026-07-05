@@ -1,220 +1,324 @@
-﻿# Files and Folders
+﻿---
+title: Files and Folders
+module: Learning Your Way Around Linux
+lesson: 11
+difficulty: Beginner
+estimated_time: 25–35 minutes
+last_reviewed: 2026-07
+platform_support: Kali-Specific
+prerequisites:
+  - Terminal Basics
+tags:
+  - linux
+  - files
+  - folders
+  - directories
+  - beginner
+---
+
+# Lesson 11: Files and Folders
+
+**Estimated Time:** 25–35 minutes
+
+**Difficulty:** Beginner
+
+**Platform Support:** Kali Linux
+
+---
+
+## Learning Objectives
+
+By the end of this lesson, you should be able to:
+
+- Explain how Linux organizes files.
+- Understand the difference between a file and a directory.
+- Navigate between directories.
+- List the contents of directories.
+- Understand absolute and relative paths.
+
+---
 
 ## Goal
 
-Understand how files and folders are organized in Linux.
+Learn how Linux stores information and how to move around the file system.
 
-## Why this matters
+---
 
-Before using Kali tools, you need to understand where files are saved, how to move between folders, and how Linux paths work.
+## Why This Matters
 
-This helps you avoid getting lost in the terminal and ensures you can navigate confidently as you start using Linux for cybersecurity tasks.
-## Plain-English explanation
+Everything in Linux is organized into directories.
 
-Linux stores files in folders, just like Windows.
+If you know where you are, you'll rarely feel lost.
 
-The difference is that Linux uses a different folder structure and a different path style.
+Many cybersecurity tools expect you to know where files are stored.
 
-In Windows, a path might look like:
+Understanding the file system is one of the biggest confidence boosters for new Linux users.
 
-    C:\Users\Name\Downloads
+---
 
-In Linux, a path might look like:
+## Plain-English Explanation
 
-    /home/kali/Downloads
+Think of your computer like a filing cabinet.
 
-Linux uses forward slashes:
+The cabinet contains drawers.
+
+The drawers contain folders.
+
+The folders contain documents.
+
+Linux works the same way.
+
+Directories (folders) hold files and other directories.
+
+---
+
+## New Terms
+
+- File
+- Directory
+- Path
+- Root Directory
+- Home Directory
+- Absolute Path
+- Relative Path
+
+---
+
+## The Linux File System
+
+At the very top is the root directory.
+
+It is written as:
 
     /
 
-Windows usually uses backslashes:
+Everything else starts here.
 
-    \
-
-## New terms
-
-- **File:** A saved item, such as a note, image, program, or download.
-- **Folder:** A container that holds files or other folders.
-- **Directory:** Another word for folder.
-- **Path:** The location of a file or folder.
-- **Home folder:** Your personal user folder.
-- **Root directory:** The top of the Linux file system.
-- **Absolute path:** A path that starts from the root directory (e.g., `/home/kali/Downloads`).
-- **Relative path:** A path that starts from your current location (e.g., `Downloads` or `~/Downloads`).
-
-## Important Linux locations
-
-Top of the file system:
+For example:
 
     /
 
-Home folders:
+        home/
 
-    /home
+            kali/
 
-Kali user's home folder:
+                Documents/
+
+                Downloads/
+
+                Pictures/
+
+---
+
+!!! info "Behind the Curtain"
+
+    Unlike Windows, Linux does not use drive letters like C:\ or D:\.
+
+    Everything begins at the single root directory:
+
+        /
+
+---
+
+## Your Home Directory
+
+Most of your work will happen inside:
 
     /home/kali
 
-Shortcut for your home folder:
+This is your personal workspace.
 
-    ~
+Think of it as your office inside a larger building.
 
-Downloads folder:
+---
 
-    ~/Downloads
-
-Temporary files:
-
-    /tmp
-
-System configuration files:
-
-    /etc
-
-## Step 1: Find where you are
+## Step 1: Where Am I?
 
 Run:
 
     pwd
 
-This shows your current directory.
-
-You may see:
+You should see something similar to:
 
     /home/kali
 
-## Step 2: List what is in the folder
+---
+
+## Step 2: What's Here?
 
 Run:
 
     ls
 
-This lists files and folders in the current directory.
+You should see files and folders in your current location.
 
-## Step 3: Create a practice folder
+---
 
-Run:
-
-    mkdir linux-practice
-
-This creates a folder named:
-
-    linux-practice
-
-## Step 4: Move into the practice folder
+## Step 3: Move Into a Folder
 
 Run:
 
-    cd linux-practice
+    cd Documents
 
-Now check your location:
+If the folder exists, you will move into it.
+
+Check your location:
 
     pwd
 
-You should see something ending with:
+---
 
-    linux-practice
-
-## Step 5: Create a practice file
-
-Run:
-
-    touch notes.txt
-
-This creates an empty file named:
-
-    notes.txt
-
-Now list the folder:
-
-    ls
-
-You should see:
-
-    notes.txt
-
-## Step 6: Move back one folder
+## Step 4: Go Back
 
 Run:
 
     cd ..
 
-This moves you up one level.
+The two dots mean:
+
+> Go up one directory.
 
 Run:
 
     pwd
 
-You should be back in the folder above `linux-practice`.
+You should be back where you started.
 
-## Be careful with delete commands
+---
 
-The command:
+## Step 5: Return Home
 
-    rm
+No matter where you are, you can return home with:
 
-deletes files.
+    cd ~
 
-Do not use delete commands unless you understand what you are deleting.
+The tilde (`~`) is a shortcut for your home directory.
 
-This guide will avoid unnecessary delete commands while you are starting.
+---
 
-## Try it yourself
+## Absolute vs Relative Paths
+
+An absolute path starts from the root.
+
+Example:
+
+    /home/kali/Documents
+
+A relative path starts from your current location.
+
+Example:
+
+    Documents
+
+Both may reach the same destination.
+
+---
+
+## Common Commands
+
+| Command   | Purpose                |
+| --------- | ---------------------- |
+| pwd       | Show current directory |
+| ls        | List files             |
+| cd folder | Enter folder           |
+| cd ..     | Go up one level        |
+| cd ~      | Return home            |
+
+---
+
+## Try It Yourself
 
 Practice this sequence:
 
     pwd
-    mkdir linux-practice
-    cd linux-practice
-    touch notes.txt
+
     ls
-    cd ..
+
+    cd Documents
+
     pwd
 
-If the folder already exists, Linux may say that it cannot create it again.
+    cd ..
 
-That is okay.
+    pwd
 
-## Common mistakes
+    cd ~
 
-- Confusing `/` and `\`
-- Forgetting which folder you are currently in
-- Typing a folder name incorrectly
-- Using spaces in folder names before understanding how spaces work in the terminal
-- Deleting files too quickly
+    pwd
+
+Try saying what each command does before pressing Enter.
+
+---
+
+## Reflection Questions
+
+1. What is the root directory?
+2. What is your home directory?
+3. What does `cd ..` do?
+4. What is the difference between an absolute path and a relative path?
+5. Why is knowing your current directory important?
+
+---
+
+## Common Mistakes
+
+- Forgetting spaces in commands.
+- Trying to enter a folder that does not exist.
+- Confusing files with directories.
+- Thinking `cd ..` deletes something.
+
+---
 
 ## Troubleshooting
 
-If you see:
+### "No such file or directory"
 
-    No such file or directory
+Double-check the folder name.
 
-It usually means Linux cannot find the file or folder you typed.
+Linux is case-sensitive.
 
-Check:
+`Documents` and `documents` are different.
 
-- Spelling
-- Capitalization
-- Whether you are in the right folder
+### Lost?
 
-## Stop and check
+Run:
+
+    pwd
+
+Then:
+
+    ls
+
+These two commands will help you figure out where you are.
+
+---
+
+## Stop and Check
 
 You are ready to continue when:
 
-- [ ] You understand that Linux paths use `/`.
-- [ ] You know that `~` means your home folder.
-- [ ] You can create a folder.
-- [ ] You can move into and out of folders.
-- [ ] You can create a simple file.
-- [ ] You know to be careful with delete commands.
+- [ ] You can explain what a directory is.
+- [ ] You can use `pwd`.
+- [ ] You can use `ls`.
+- [ ] You can use `cd`.
+- [ ] You understand the difference between absolute and relative paths.
 
-## Summary
+---
 
-Linux organizes files in directories.
+## Lesson Summary
 
-You learned how to check your location, list files, create a folder, move into it, create a file, and move back.
+In this lesson you learned:
 
-## What to do next
+- Linux organizes everything into directories.
+- The root directory is `/`.
+- Your home directory is where most of your work will happen.
+- `pwd`, `ls`, and `cd` are fundamental navigation commands.
+- Absolute and relative paths describe locations in different ways.
 
-Continue to Lesson 10: Useful Commands.
+---
+
+## What To Do Next
+
+Continue to **Lesson 12 – Useful Commands**.
+
+You'll build on today's navigation skills by learning several safe commands you'll use throughout the rest of the course.

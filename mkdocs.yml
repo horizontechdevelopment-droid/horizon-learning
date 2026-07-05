@@ -34,7 +34,7 @@ nav:
           - "Lesson 8: Updating Kali Linux": cybersecurity-first-steps/kali/updating-kali.md
           - "Lesson 9: Shutting Down Kali Safely": cybersecurity-first-steps/kali/shutting-down-kali.md
 
-      - "Module 3: Getting Comfortable with Linux":
+      - "Module 3: Learning Your Way Around Linux":
           - "Lesson 10: Terminal Basics": cybersecurity-first-steps/linux-basics/terminal-basics.md
           - "Lesson 11: Files and Folders": cybersecurity-first-steps/linux-basics/files-and-folders.md
           - "Lesson 12: Useful Commands": cybersecurity-first-steps/linux-basics/useful-commands.md
