@@ -78,6 +78,8 @@ nav:
   - Changelog: changelog.md
   - Content Roadmap: content-roadmap.md
   - Style Guide: style-guide.md
+  - Offline Version: offline.md
+  - Feedback: feedback.md
 
 markdown_extensions:
   - admonition
@@ -85,3 +87,12 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+
+plugins:
+  - search
+  - print-site:
+      add_to_navigation: true
+      print_page_title: Offline Course PDF
+      add_print_site_banner: true
+      toc_title: Contents
+      toc_depth: 2
