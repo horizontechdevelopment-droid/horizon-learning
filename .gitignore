@@ -6,6 +6,20 @@ __pycache__/
 # MkDocs
 site/
 
+# Node / Workers
+node_modules/
+.wrangler/
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+!.env.example
+
+# Local Cloudflare/D1 state
+.wrangler/state/
+*.sqlite
+*.sqlite3
+
 # VS Code local
 .vscode/*.log
 
