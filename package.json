@@ -1,0 +1,14 @@
+{
+  "name": "horizon-learning",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:api": "wrangler dev",
+    "test": "node --test",
+    "d1:migrate:local": "wrangler d1 migrations apply horizon-learning --local"
+  },
+  "devDependencies": {
+    "miniflare": "4.20260616.0",
+    "wrangler": "4.101.0"
+  }
+}
