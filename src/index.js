@@ -11,6 +11,7 @@ import {
   validatePassword,
   verifyPassword,
 } from './security.js';
+import { attachmentHeader, resourceStorage } from './resource-storage.js';
 
 const JSON_HEADERS = { 'Content-Type': 'application/json; charset=utf-8' };
 const MAX_JSON_BODY_BYTES = 64 * 1024;
@@ -174,12 +175,72 @@ async function courseResources(env, slug) {
   const course = await env.DB.prepare('SELECT id, slug, title FROM courses WHERE slug = ? AND published = 1').bind(slug).first();
   if (!course) return publicJson({ error: 'course_not_found' }, 404);
   const { results } = await env.DB.prepare(`
-    SELECT id, slug, title, description, resource_type, version
-    FROM course_resources
-    WHERE course_id = ? AND published = 1
-    ORDER BY sort_order, title
+    SELECT r.id, r.slug, r.title, r.description, r.resource_kind, r.module_id,
+           v.id AS version_id, v.version_label, v.original_filename,
+           v.content_type, v.byte_size, v.sha256, v.published_at
+    FROM course_resources r
+    JOIN course_resource_versions v ON v.id = r.current_version_id
+    WHERE r.course_id = ? AND r.published = 1 AND v.published = 1
+    ORDER BY r.sort_order, r.title
   `).bind(course.id).all();
-  return publicJson({ course, resources: results });
+  return publicJson({ course, resources: results.map(resourceDto) });
+}
+
+function resourceDto(row) {
+  return {
+    id: row.id,
+    slug: row.slug,
+    title: row.title,
+    description: row.description,
+    resource_type: row.resource_kind,
+    module_id: row.module_id,
+    download_url: `/api/resources/${encodeURIComponent(row.id)}/download`,
+    current_version: {
+      id: row.version_id,
+      version: row.version_label,
+      filename: row.original_filename,
+      content_type: row.content_type,
+      byte_size: row.byte_size,
+      sha256: row.sha256,
+      published_at: row.published_at,
+    },
+  };
+}
+
+async function publicResource(env, resourceId) {
+  const row = await env.DB.prepare(`
+    SELECT r.id, r.slug, r.title, r.description, r.resource_kind, r.module_id,
+           v.id AS version_id, v.version_label, v.original_filename,
+           v.content_type, v.byte_size, v.sha256, v.published_at
+    FROM course_resources r
+    JOIN course_resource_versions v ON v.id = r.current_version_id
+    WHERE r.id = ? AND r.published = 1 AND v.published = 1
+  `).bind(resourceId).first();
+  if (!row) return publicJson({ error: 'resource_not_found' }, 404);
+  return publicJson({ resource: resourceDto(row) });
+}
+
+async function downloadResource(env, resourceId) {
+  const row = await env.DB.prepare(`
+    SELECT v.storage_key, v.original_filename, v.content_type, v.byte_size, v.sha256
+    FROM course_resources r
+    JOIN course_resource_versions v ON v.id = r.current_version_id
+    WHERE r.id = ? AND r.published = 1 AND v.published = 1
+  `).bind(resourceId).first();
+  if (!row) return json({ error: 'resource_not_found' }, 404);
+  const object = await resourceStorage(env.RESOURCES).get(row.storage_key);
+  if (!object) return json({ error: 'resource_file_unavailable' }, 503);
+  return new Response(object.body, {
+    status: 200,
+    headers: {
+      'Content-Type': row.content_type,
+      'Content-Length': String(row.byte_size),
+      'Content-Disposition': attachmentHeader(row.original_filename),
+      'Cache-Control': 'public, max-age=60, must-revalidate',
+      ETag: `"sha256-${row.sha256}"`,
+      'X-Content-Type-Options': 'nosniff',
+    },
+  });
 }
 
 async function courseLessons(env, courseId) {
@@ -368,6 +429,20 @@ export default {
           decodeURIComponent(progressMutationMatch[1]),
           progressMutationMatch[2]
         )
+        : methodNotAllowed();
+    }
+
+    const resourceDownloadMatch = path.match(/^\/api\/resources\/([^/]+)\/download$/);
+    if (resourceDownloadMatch) {
+      return request.method === 'GET'
+        ? downloadResource(env, decodeURIComponent(resourceDownloadMatch[1]))
+        : methodNotAllowed();
+    }
+
+    const publicResourceMatch = path.match(/^\/api\/resources\/([^/]+)$/);
+    if (publicResourceMatch) {
+      return request.method === 'GET'
+        ? publicResource(env, decodeURIComponent(publicResourceMatch[1]))
         : methodNotAllowed();
     }
 
