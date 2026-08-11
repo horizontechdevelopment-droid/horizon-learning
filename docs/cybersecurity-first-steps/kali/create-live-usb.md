@@ -1,3 +1,13 @@
+---
+course_id: cybersecurity-first-steps
+module_id: cfs-kali
+lesson_id: cfs-kali-create-live-usb
+title: Create a Live USB
+content_type: lesson
+progress_required: true
+order: 60
+---
+
 ﻿---
 title: Create a Live USB
 module: Kali Linux

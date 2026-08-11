@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-linux
+lesson_id: cfs-linux-welcome
+content_type: module_intro
+progress_required: true
+order: 100
 title: Learning Your Way Around Linux
 description: Welcome to Module 3
 ---

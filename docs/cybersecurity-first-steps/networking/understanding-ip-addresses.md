@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-networking
+lesson_id: cfs-networking-ip-addresses
+content_type: lesson
+progress_required: true
+order: 220
 title: Understanding IP Addresses
 module: Understanding Networks
 lesson: 18

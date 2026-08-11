@@ -1,3 +1,13 @@
+---
+course_id: cybersecurity-first-steps
+module_id: cfs-getting-started
+lesson_id: cfs-getting-started-learning-path
+title: Learning Path
+content_type: lesson
+progress_required: true
+order: 10
+---
+
 ﻿# Learning Path
 
 ## Goal

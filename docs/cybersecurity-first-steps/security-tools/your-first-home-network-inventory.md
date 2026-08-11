@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-security-tools
+lesson_id: cfs-security-tools-home-inventory
+content_type: lesson
+progress_required: true
+order: 330
 title: Your First Home Network Inventory
 module: Your First Security Tools
 lesson: 26

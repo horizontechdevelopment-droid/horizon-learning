@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-networking
+lesson_id: cfs-networking-milestone
+content_type: milestone
+progress_required: true
+order: 270
 title: Module 4 Milestone
 module: Understanding Networks
 difficulty: Beginner

@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-networking
+lesson_id: cfs-networking-review
+content_type: review
+progress_required: true
+order: 260
 title: Module 4 Review
 module: Understanding Networks
 difficulty: Beginner

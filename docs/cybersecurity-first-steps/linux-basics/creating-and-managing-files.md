@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-linux
+lesson_id: cfs-linux-managing-files
+content_type: lesson
+progress_required: true
+order: 150
 title: Creating and Managing Files
 module: Learning Your Way Around Linux
 lesson: 14

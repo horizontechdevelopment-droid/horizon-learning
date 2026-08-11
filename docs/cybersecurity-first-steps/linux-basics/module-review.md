@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-linux
+lesson_id: cfs-linux-review
+content_type: review
+progress_required: true
+order: 170
 title: Module 3 Review
 module: Learning Your Way Around Linux
 difficulty: Beginner

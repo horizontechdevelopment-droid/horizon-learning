@@ -1,3 +1,13 @@
+---
+course_id: cybersecurity-first-steps
+module_id: cfs-linux
+lesson_id: cfs-linux-files-and-folders
+title: Files and Folders
+content_type: lesson
+progress_required: true
+order: 120
+---
+
 ﻿---
 title: Files and Folders
 module: Learning Your Way Around Linux

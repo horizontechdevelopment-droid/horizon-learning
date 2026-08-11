@@ -1,3 +1,13 @@
+---
+course_id: cybersecurity-first-steps
+module_id: cfs-linux
+lesson_id: cfs-linux-terminal-basics
+title: Terminal Basics
+content_type: lesson
+progress_required: true
+order: 110
+---
+
 ﻿---
 title: Terminal Basics
 module: Getting Comfortable with Linux

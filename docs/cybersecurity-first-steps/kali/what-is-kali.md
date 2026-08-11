@@ -1,3 +1,13 @@
+---
+course_id: cybersecurity-first-steps
+module_id: cfs-kali
+lesson_id: cfs-kali-what-is-kali
+title: What Is Kali?
+content_type: lesson
+progress_required: true
+order: 40
+---
+
 ﻿# What Is Kali Linux?
 
 ## Goal

@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-networking
+lesson_id: cfs-networking-dns
+content_type: lesson
+progress_required: true
+order: 240
 title: How Devices Find Each Other (DNS)
 module: Understanding Networks
 lesson: 20

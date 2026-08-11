@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-security-tools
+lesson_id: cfs-security-tools-safe-discovery
+content_type: lesson
+progress_required: true
+order: 320
 title: Safe Network Discovery
 module: Your First Security Tools
 lesson: 25

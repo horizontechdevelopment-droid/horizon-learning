@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-linux
+lesson_id: cfs-linux-finding-help
+content_type: lesson
+progress_required: true
+order: 140
 title: Finding Help
 module: Learning Your Way Around Linux
 lesson: 13

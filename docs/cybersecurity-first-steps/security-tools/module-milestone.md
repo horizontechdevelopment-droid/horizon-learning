@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-security-tools
+lesson_id: cfs-security-tools-milestone
+content_type: milestone
+progress_required: true
+order: 350
 title: Module 5 Milestone
 module: Your First Security Tools
 difficulty: Beginner

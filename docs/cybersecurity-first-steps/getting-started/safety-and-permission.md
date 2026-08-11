@@ -1,3 +1,13 @@
+---
+course_id: cybersecurity-first-steps
+module_id: cfs-getting-started
+lesson_id: cfs-getting-started-safety-and-permission
+title: Safety and Permission
+content_type: lesson
+progress_required: true
+order: 30
+---
+
 ﻿# Safety and Permission
 
 ## Goal
