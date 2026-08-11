@@ -11,5 +11,11 @@
       "preview_database_id": "horizon-learning-local",
       "migrations_dir": "migrations"
     }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "RESOURCES",
+      "bucket_name": "horizon-learning-resources"
+    }
   ]
 }

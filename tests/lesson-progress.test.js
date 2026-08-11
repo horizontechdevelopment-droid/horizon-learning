@@ -14,6 +14,7 @@ const root = fileURLToPath(new URL('..', import.meta.url));
 const docsRoot = join(root, 'docs', 'cybersecurity-first-steps');
 const workerPath = join(root, 'src', 'index.js');
 const securityPath = join(root, 'src', 'security.js');
+const resourceStoragePath = join(root, 'src', 'resource-storage.js');
 const baseUrl = 'https://horizon-learning.test';
 const courseId = 'cybersecurity-first-steps';
 const password = 'Session2-Integration!9zQ';
@@ -123,6 +124,7 @@ describe('lesson progress integration', { concurrency: false }, () => {
       modules: [
         { type: 'ESModule', path: workerPath },
         { type: 'ESModule', path: securityPath },
+        { type: 'ESModule', path: resourceStoragePath },
       ],
       modulesRoot: root,
       d1Databases: { DB: 'session-2-integration' },

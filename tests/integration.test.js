@@ -6,6 +6,7 @@ import { Miniflare } from 'miniflare';
 
 const workerPath = fileURLToPath(new URL('../src/index.js', import.meta.url));
 const securityPath = fileURLToPath(new URL('../src/security.js', import.meta.url));
+const resourceStoragePath = fileURLToPath(new URL('../src/resource-storage.js', import.meta.url));
 const migrationPath = fileURLToPath(new URL('../migrations/0001_account_course_foundation.sql', import.meta.url));
 const baseUrl = 'https://horizon-learning.test';
 const password = 'Session1-Integration!9zQ';
@@ -43,6 +44,7 @@ describe('account and course integration', { concurrency: false }, () => {
       modules: [
         { type: 'ESModule', path: workerPath },
         { type: 'ESModule', path: securityPath },
+        { type: 'ESModule', path: resourceStoragePath },
       ],
       modulesRoot: fileURLToPath(new URL('..', import.meta.url)),
       d1Databases: { DB: 'session-1-integration' },

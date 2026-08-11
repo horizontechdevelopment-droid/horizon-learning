@@ -6,7 +6,8 @@
     "dev:api": "wrangler dev",
     "test": "node --test",
     "d1:migrate:local": "wrangler d1 migrations apply horizon-learning --local",
-    "lessons:sync:local": "node tooling/sync-lessons.js"
+    "lessons:sync:local": "node tooling/sync-lessons.js",
+    "resources:local": "node tooling/manage-resources.js"
   },
   "devDependencies": {
     "miniflare": "4.20260616.0",
