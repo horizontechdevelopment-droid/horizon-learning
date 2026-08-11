@@ -1,3 +1,13 @@
+---
+course_id: cybersecurity-first-steps
+module_id: cfs-linux
+lesson_id: cfs-linux-useful-commands
+title: Useful Commands
+content_type: lesson
+progress_required: true
+order: 130
+---
+
 ﻿# Useful Commands
 
 ## Goal

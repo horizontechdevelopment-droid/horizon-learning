@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-security-tools
+lesson_id: cfs-security-tools-welcome
+content_type: module_intro
+progress_required: true
+order: 280
 title: Your First Security Tools
 description: Welcome to Module 5
 ---

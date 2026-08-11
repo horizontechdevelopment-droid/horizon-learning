@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-security-tools
+lesson_id: cfs-security-tools-review
+content_type: review
+progress_required: true
+order: 340
 title: Module 5 Review
 module: Your First Security Tools
 difficulty: Beginner

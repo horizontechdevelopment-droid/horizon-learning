@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-security-tools
+lesson_id: cfs-security-tools-meeting-nmap
+content_type: lesson
+progress_required: true
+order: 300
 title: Meeting Nmap
 module: Your First Security Tools
 lesson: 23

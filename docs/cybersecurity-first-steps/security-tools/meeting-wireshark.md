@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-security-tools
+lesson_id: cfs-security-tools-meeting-wireshark
+content_type: lesson
+progress_required: true
+order: 310
 title: Meeting Wireshark
 module: Your First Security Tools
 lesson: 24

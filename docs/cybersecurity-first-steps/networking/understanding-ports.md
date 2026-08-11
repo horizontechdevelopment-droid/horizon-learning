@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-networking
+lesson_id: cfs-networking-ports
+content_type: lesson
+progress_required: true
+order: 230
 title: Understanding Ports
 module: Understanding Networks
 lesson: 19

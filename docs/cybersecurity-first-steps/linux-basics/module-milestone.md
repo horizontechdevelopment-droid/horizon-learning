@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-linux
+lesson_id: cfs-linux-milestone
+content_type: milestone
+progress_required: true
+order: 180
 title: Module 3 Milestone
 module: Learning Your Way Around Linux
 difficulty: Beginner

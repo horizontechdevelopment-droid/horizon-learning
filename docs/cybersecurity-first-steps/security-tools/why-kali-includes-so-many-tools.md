@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-security-tools
+lesson_id: cfs-security-tools-kali-toolset
+content_type: lesson
+progress_required: true
+order: 290
 title: Why Kali Includes So Many Tools
 module: Your First Security Tools
 lesson: 22

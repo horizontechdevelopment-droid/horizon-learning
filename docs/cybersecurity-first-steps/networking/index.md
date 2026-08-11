@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-networking
+lesson_id: cfs-networking-welcome
+content_type: module_intro
+progress_required: true
+order: 190
 title: Understanding Networks
 description: Welcome to Module 4
 ---

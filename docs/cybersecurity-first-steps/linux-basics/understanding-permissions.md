@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-linux
+lesson_id: cfs-linux-permissions
+content_type: lesson
+progress_required: true
+order: 160
 title: Understanding Permissions
 module: Learning Your Way Around Linux
 lesson: 15

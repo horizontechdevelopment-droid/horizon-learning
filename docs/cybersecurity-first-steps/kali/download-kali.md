@@ -1,3 +1,13 @@
+---
+course_id: cybersecurity-first-steps
+module_id: cfs-kali
+lesson_id: cfs-kali-download
+title: Download Kali
+content_type: lesson
+progress_required: true
+order: 50
+---
+
 ﻿# Download Kali
 
 ## Goal

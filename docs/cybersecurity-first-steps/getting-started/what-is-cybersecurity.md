@@ -1,3 +1,13 @@
+---
+course_id: cybersecurity-first-steps
+module_id: cfs-getting-started
+lesson_id: cfs-getting-started-what-is-cybersecurity
+title: What Is Cybersecurity?
+content_type: lesson
+progress_required: true
+order: 20
+---
+
 ﻿# What Is Cybersecurity?
 
 ## Goal

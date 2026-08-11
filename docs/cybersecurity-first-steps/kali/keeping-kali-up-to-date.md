@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-kali
+lesson_id: cfs-kali-keep-updated
+content_type: lesson
+progress_required: true
+order: 80
 title: Updating Kali Linux
 module: Kali Linux
 lesson: 8

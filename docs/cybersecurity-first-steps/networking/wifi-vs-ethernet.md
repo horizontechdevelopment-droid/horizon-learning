@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-networking
+lesson_id: cfs-networking-wifi-vs-ethernet
+content_type: lesson
+progress_required: true
+order: 210
 title: Wi-Fi vs Ethernet
 module: Understanding Networks
 lesson: 17

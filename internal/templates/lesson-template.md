@@ -21,9 +21,13 @@ Every lesson begins with metadata.
 Example:
 
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-example-module
+lesson_id: cfs-example-module-stable-topic
 title:
-module:
-lesson:
+content_type: lesson
+progress_required: true
+order:
 difficulty:
 estimated_time:
 last_reviewed:

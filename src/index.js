@@ -182,6 +182,106 @@ async function courseResources(env, slug) {
   return publicJson({ course, resources: results });
 }
 
+async function courseLessons(env, courseId) {
+  const course = await env.DB.prepare('SELECT slug, title FROM courses WHERE slug = ? AND published = 1')
+    .bind(courseId).first();
+  if (!course) return publicJson({ error: 'course_not_found' }, 404);
+  const { results } = await env.DB.prepare(`
+    SELECT id, course_id, module_id, source_path, title, content_type,
+           progress_required, sort_order
+    FROM lessons
+    WHERE course_id = ? AND published = 1
+    ORDER BY sort_order, id
+  `).bind(courseId).all();
+  return publicJson({ course, lessons: results.map((lesson) => ({
+    ...lesson,
+    progress_required: lesson.progress_required === 1,
+  })) });
+}
+
+async function progressSummary(request, env, courseId) {
+  const auth = await requireSession(request, env);
+  if (auth.error) return auth.error;
+  const course = await env.DB.prepare('SELECT slug, title FROM courses WHERE slug = ? AND published = 1')
+    .bind(courseId).first();
+  if (!course) return json({ error: 'course_not_found' }, 404);
+  const { results } = await env.DB.prepare(`
+    SELECT l.id, l.module_id, l.source_path, l.title, l.sort_order,
+           p.started_at, p.last_viewed_at, p.completed_at
+    FROM lessons l
+    LEFT JOIN lesson_progress p ON p.lesson_id = l.id AND p.user_id = ?
+    WHERE l.course_id = ? AND l.published = 1 AND l.progress_required = 1
+    ORDER BY l.sort_order, l.id
+  `).bind(auth.session.user_id, courseId).all();
+  const completed = results.filter((lesson) => lesson.completed_at !== null).length;
+  const total = results.length;
+  const incomplete = results.filter((lesson) => lesson.completed_at === null);
+  const lastViewedLesson = incomplete
+    .filter((lesson) => lesson.last_viewed_at !== null)
+    .sort((a, b) => b.last_viewed_at.localeCompare(a.last_viewed_at))[0] ?? null;
+  const resumeLesson = lastViewedLesson ?? incomplete[0] ?? null;
+  const modules = Object.values(results.reduce((summary, lesson) => {
+    summary[lesson.module_id] ??= { module_id: lesson.module_id, completed: 0, total: 0, percentage: 0 };
+    summary[lesson.module_id].total += 1;
+    if (lesson.completed_at !== null) summary[lesson.module_id].completed += 1;
+    summary[lesson.module_id].percentage = Math.round(
+      (summary[lesson.module_id].completed / summary[lesson.module_id].total) * 100
+    );
+    return summary;
+  }, {}));
+  return json({
+    course,
+    completed,
+    total,
+    percentage: total === 0 ? 0 : Math.round((completed / total) * 100),
+    course_complete: total > 0 && completed === total,
+    last_viewed_lesson: lastViewedLesson,
+    resume_lesson: resumeLesson,
+    modules,
+    lessons: results,
+  });
+}
+
+async function updateLessonProgress(request, env, lessonId, action) {
+  if (!sameOriginOrNonBrowser(request)) return json({ error: 'invalid_origin' }, 403);
+  const auth = await requireSession(request, env);
+  if (auth.error) return auth.error;
+  const lesson = await env.DB.prepare(`
+    SELECT id, course_id, module_id, title
+    FROM lessons
+    WHERE id = ? AND published = 1
+  `).bind(lessonId).first();
+  if (!lesson) return json({ error: 'lesson_not_found' }, 404);
+  const now = new Date().toISOString();
+  if (action === 'view') {
+    await env.DB.prepare(`
+      INSERT INTO lesson_progress (
+        user_id, lesson_id, started_at, last_viewed_at, completed_at, updated_at
+      ) VALUES (?, ?, ?, ?, NULL, ?)
+      ON CONFLICT(user_id, lesson_id) DO UPDATE SET
+        last_viewed_at = excluded.last_viewed_at,
+        updated_at = excluded.updated_at
+    `).bind(auth.session.user_id, lesson.id, now, now, now).run();
+  } else {
+    await env.DB.prepare(`
+      INSERT INTO lesson_progress (
+        user_id, lesson_id, started_at, last_viewed_at, completed_at, updated_at
+      ) VALUES (?, ?, ?, ?, ?, ?)
+      ON CONFLICT(user_id, lesson_id) DO UPDATE SET
+        completed_at = COALESCE(lesson_progress.completed_at, excluded.completed_at),
+        updated_at = CASE
+          WHEN lesson_progress.completed_at IS NULL THEN excluded.updated_at
+          ELSE lesson_progress.updated_at
+        END
+    `).bind(auth.session.user_id, lesson.id, now, now, now, now).run();
+  }
+  const progress = await env.DB.prepare(`
+    SELECT started_at, last_viewed_at, completed_at, updated_at
+    FROM lesson_progress WHERE user_id = ? AND lesson_id = ?
+  `).bind(auth.session.user_id, lesson.id).first();
+  return json({ lesson, progress });
+}
+
 async function myLearning(request, env) {
   const auth = await requireSession(request, env);
   if (auth.error) return auth.error;
@@ -244,6 +344,32 @@ export default {
     if (path === '/api/me') return request.method === 'GET' ? me(request, env) : methodNotAllowed();
     if (path === '/api/courses') return request.method === 'GET' ? courses(env) : methodNotAllowed();
     if (path === '/api/my-learning') return request.method === 'GET' ? myLearning(request, env) : methodNotAllowed();
+
+    const lessonCatalogMatch = path.match(/^\/api\/courses\/([^/]+)\/lessons$/);
+    if (lessonCatalogMatch) {
+      return request.method === 'GET'
+        ? courseLessons(env, decodeURIComponent(lessonCatalogMatch[1]))
+        : methodNotAllowed();
+    }
+
+    const progressSummaryMatch = path.match(/^\/api\/progress\/([^/]+)$/);
+    if (progressSummaryMatch) {
+      return request.method === 'GET'
+        ? progressSummary(request, env, decodeURIComponent(progressSummaryMatch[1]))
+        : methodNotAllowed();
+    }
+
+    const progressMutationMatch = path.match(/^\/api\/progress\/([^/]+)\/(view|complete)$/);
+    if (progressMutationMatch) {
+      return request.method === 'PUT'
+        ? updateLessonProgress(
+          request,
+          env,
+          decodeURIComponent(progressMutationMatch[1]),
+          progressMutationMatch[2]
+        )
+        : methodNotAllowed();
+    }
 
     const resourceMatch = path.match(/^\/api\/courses\/([^/]+)\/resources$/);
     if (resourceMatch) return request.method === 'GET' ? courseResources(env, decodeURIComponent(resourceMatch[1])) : methodNotAllowed();

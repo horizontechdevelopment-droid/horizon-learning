@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-kali
+lesson_id: cfs-kali-safe-shutdown
+content_type: lesson
+progress_required: true
+order: 90
 title: Shutting Down Kali Safely
 module: Kali Linux
 lesson: 9

@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-networking
+lesson_id: cfs-networking-home-network
+content_type: lesson
+progress_required: true
+order: 250
 title: Understanding Your Home Network
 module: Understanding Networks
 lesson: 21

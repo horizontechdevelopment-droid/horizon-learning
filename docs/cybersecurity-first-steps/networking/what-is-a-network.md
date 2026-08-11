@@ -1,4 +1,10 @@
 ---
+course_id: cybersecurity-first-steps
+module_id: cfs-networking
+lesson_id: cfs-networking-what-is-a-network
+content_type: lesson
+progress_required: true
+order: 200
 title: What Is a Network?
 module: Understanding Networks
 lesson: 16

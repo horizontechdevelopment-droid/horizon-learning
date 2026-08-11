@@ -1,3 +1,13 @@
+---
+course_id: cybersecurity-first-steps
+module_id: cfs-kali
+lesson_id: cfs-kali-first-boot
+title: Starting Kali for the First Time
+content_type: lesson
+progress_required: true
+order: 70
+---
+
 ﻿---
 title: Starting Kali for the First Time
 module: Kali Linux
