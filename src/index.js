@@ -13,6 +13,8 @@ import {
 } from './security.js';
 
 const JSON_HEADERS = { 'Content-Type': 'application/json; charset=utf-8' };
+const MAX_JSON_BODY_BYTES = 64 * 1024;
+const DUMMY_PASSWORD_HASH = 'pbkdf2-sha256$310000$Ho4IA8tU5tt+PSPVV9ST/g==$KEt6Ci+jY9spJSJcxTOdiRc4FuiQ73azzMDJPa79VnU=';
 
 function json(data, status = 200, headers = {}) {
   return new Response(JSON.stringify(data), {
@@ -31,7 +33,38 @@ function publicJson(data, status = 200) {
 async function bodyJson(request) {
   const type = request.headers.get('Content-Type') ?? '';
   if (!type.toLowerCase().startsWith('application/json')) throw new Error('invalid_content_type');
-  return request.json();
+  const declaredLength = Number(request.headers.get('Content-Length'));
+  if (Number.isFinite(declaredLength) && declaredLength > MAX_JSON_BODY_BYTES) {
+    throw new Error('request_body_too_large');
+  }
+
+  const reader = request.body?.getReader();
+  if (!reader) throw new Error('invalid_json');
+  const chunks = [];
+  let received = 0;
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    received += value.byteLength;
+    if (received > MAX_JSON_BODY_BYTES) {
+      await reader.cancel();
+      throw new Error('request_body_too_large');
+    }
+    chunks.push(value);
+  }
+
+  const bytes = new Uint8Array(received);
+  let offset = 0;
+  for (const chunk of chunks) {
+    bytes.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  return JSON.parse(new TextDecoder().decode(bytes));
+}
+
+function invalidJsonResponse(error) {
+  if (error?.message === 'request_body_too_large') return json({ error: 'request_body_too_large' }, 413);
+  return json({ error: 'invalid_json_request' }, 400);
 }
 
 function validEmail(email) {
@@ -50,7 +83,7 @@ async function getSession(request, env) {
     WHERE s.token_hash = ? AND s.expires_at > ?
   `).bind(tokenHash, now).first();
   if (!row) return null;
-  env.DB.prepare('UPDATE sessions SET last_seen_at = ? WHERE id = ?').bind(now, row.session_id).run();
+  await env.DB.prepare('UPDATE sessions SET last_seen_at = ? WHERE id = ?').bind(now, row.session_id).run();
   return row;
 }
 
@@ -75,7 +108,7 @@ async function createSession(env, userId) {
 async function register(request, env) {
   if (!sameOriginOrNonBrowser(request)) return json({ error: 'invalid_origin' }, 403);
   let input;
-  try { input = await bodyJson(request); } catch { return json({ error: 'invalid_json_request' }, 400); }
+  try { input = await bodyJson(request); } catch (error) { return invalidJsonResponse(error); }
   const email = normalizeEmail(input.email);
   const password = input.password;
   if (!validEmail(email)) return json({ error: 'invalid_email' }, 400);
@@ -100,12 +133,13 @@ async function register(request, env) {
 async function login(request, env) {
   if (!sameOriginOrNonBrowser(request)) return json({ error: 'invalid_origin' }, 403);
   let input;
-  try { input = await bodyJson(request); } catch { return json({ error: 'invalid_json_request' }, 400); }
+  try { input = await bodyJson(request); } catch (error) { return invalidJsonResponse(error); }
   const email = normalizeEmail(input.email);
   const password = input.password;
   if (!validEmail(email) || typeof password !== 'string') return json({ error: 'invalid_credentials' }, 401);
   const user = await env.DB.prepare('SELECT id, email, password_hash FROM users WHERE email = ?').bind(email).first();
-  if (!user || !(await verifyPassword(password, user.password_hash))) return json({ error: 'invalid_credentials' }, 401);
+  const passwordMatches = await verifyPassword(password, user?.password_hash ?? DUMMY_PASSWORD_HASH);
+  if (!user || !passwordMatches) return json({ error: 'invalid_credentials' }, 401);
   const session = await createSession(env, user.id);
   return json({ user: { id: user.id, email: user.email } }, 200, { 'Set-Cookie': sessionCookie(session.rawToken, session.expires) });
 }
